@@ -1,0 +1,21 @@
+{
+	"info": {
+		"_postman_id": "4037e101-f526-452e-b976-b7b838ada9fb",
+		"name": "cats",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cat/add",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
