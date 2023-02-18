@@ -77,6 +77,9 @@ func UpdateCat(cat Cat) Cat {
 	oldCat.Color = cat.Color
 
 	_, err := pgConnect.Model(&oldCat).
+		Set("name = ?", oldCat.Name).
+		Set("is-stripe = ?", oldCat.IsStripe).
+		Set("color = ?", oldCat.Color).
 		Where("id = ?", oldCat.ID).
 		Update()
 	if err != nil {
