@@ -1,7 +1,7 @@
 package main
 
 type Cat struct {
-	tableName struct{} `pg:"cats"`
+	tableName struct{} `pg:"cats_3"`
 	ID        string   `json:"id" pg:"id"`
 	Name      string   `json:"name" pg:"name"`
 	IsStripe  bool     `json:"is_stripe" pg:"is_stripe"`
@@ -78,7 +78,7 @@ func UpdateCat(cat Cat) Cat {
 
 	_, err := pgConnect.Model(&oldCat).
 		Set("name = ?", oldCat.Name).
-		Set("is-stripe = ?", oldCat.IsStripe).
+		Set("is_stripe = ?", oldCat.IsStripe).
 		Set("color = ?", oldCat.Color).
 		Where("id = ?", oldCat.ID).
 		Update()
